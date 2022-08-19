@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Bottom from "./Components/Bottom";
+import LeftSide from "./Components/LeftSide";
+import RightSide from "./Components/RightSide";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="h-screen overflow-hidden">
+      <div className="grid grid-cols-12">
+        <LeftSide />
+        <RightSide />
+      </div>
+      <Bottom 
+        className="relative bottom-[-10]"
+      />
     </div>
   );
 }
